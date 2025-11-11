@@ -1,5 +1,3 @@
-YOUTUBE_API_KEY = "AIzaSyBlvjNoTLUM8muoF5ZR5rBYfSycHE_Rxgg"
-
 CONFIG = {
     "max_comments_per_video":5, #1000,  # Maximum comments to fetch
     "fetch_interval": 300,  # Fetch new comments every 300 seconds (5 minutes)

@@ -1,15 +1,23 @@
 import os
 import pandas as pd
 import logging
+from dotenv import load_dotenv  # NEW: to load environment variables
 
 logger = logging.getLogger(__name__)
 
 class YouTubeFetcher:
     def __init__(self):
         from googleapiclient.discovery import build
-        from config import YOUTUBE_API_KEY, FILE_PATHS
+        from config import FILE_PATHS
 
-        self.api_key = YOUTUBE_API_KEY
+        # Load environment variables from .env
+        load_dotenv()
+
+        # Get API key from environment
+        self.api_key = os.getenv("YOUTUBE_API_KEY")
+        if not self.api_key:
+            raise ValueError("YOUTUBE_API_KEY not found in .env file")
+
         self.file_paths = FILE_PATHS
         self.youtube = build("youtube", "v3", developerKey=self.api_key)
 

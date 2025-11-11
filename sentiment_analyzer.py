@@ -1,8 +1,3 @@
-"""
-sentiment_analyzer.py - Perform sentiment analysis on YouTube comments
-Uses VADER (best for social media) with TextBlob as alternative
-"""
-
 import pandas as pd
 import numpy as np
 from nltk.sentiment import SentimentIntensityAnalyzer

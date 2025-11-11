@@ -1,5 +1,5 @@
 CONFIG = {
-    "max_comments_per_video":5, #1000,  # Maximum comments to fetch
+    "max_comments_per_video":1000,  # Maximum comments to fetch
     "fetch_interval": 300,  # Fetch new comments every 300 seconds (5 minutes)
     "sentiment_threshold": 0.5,  # Threshold for classifying sentiment
     "batch_size": 100,  # Process comments in batches of 100
